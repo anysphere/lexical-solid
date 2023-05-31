@@ -8,10 +8,7 @@ import { isServer } from "solid-js/web";
 export function usePlainTextSetup(editor: LexicalEditor) {
   if (!isServer) {
     onCleanup(
-      mergeRegister(
-        plainText.registerPlainText(editor),
-        registerDragonSupport(editor)
-      ) // We only do this for init
+      mergeRegister(plainText.registerPlainText(editor)) // We only do this for init
     );
   }
 }
