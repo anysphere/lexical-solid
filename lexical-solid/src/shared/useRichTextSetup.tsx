@@ -8,7 +8,7 @@ import { registerDragonSupport } from "@lexical/dragon";
 export function useRichTextSetup(editor: LexicalEditor) {
   if (!isServer) {
     onCleanup(
-      mergeRegister(registerRichText(editor), registerDragonSupport(editor)) // We only do this for init
+      mergeRegister(registerRichText(editor)) // We only do this for init
     );
   }
 }
