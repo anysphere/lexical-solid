@@ -10,10 +10,10 @@ import {
   createEffect,
   createSignal,
   onCleanup,
-  type JSX,
   Show,
   Accessor,
 } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 import {
   LexicalMenu,

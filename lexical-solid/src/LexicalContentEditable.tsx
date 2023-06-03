@@ -1,4 +1,5 @@
-import { createSignal, JSX, mergeProps, onCleanup, onMount } from "solid-js";
+import { createSignal, mergeProps, onCleanup, onMount } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 import { useLexicalComposerContext } from "./LexicalComposerContext";
 
 type Props = Readonly<{

@@ -17,7 +17,8 @@ import {
 } from "lexical";
 import { useLexicalComposerContext } from "./LexicalComposerContext";
 import { mergeRegister } from "@lexical/utils";
-import { Accessor, createEffect, JSX, on, onCleanup } from "solid-js";
+import { Accessor, createEffect, on, onCleanup } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 type ChangeHandler = (url: string | null, prevUrl: string | null) => void;
 

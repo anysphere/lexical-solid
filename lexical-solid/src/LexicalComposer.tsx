@@ -14,7 +14,8 @@ import {
   LexicalEditor,
   LexicalNode,
 } from "lexical";
-import { JSX, onMount } from "solid-js";
+import { onMount } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 const HISTORY_MERGE_OPTIONS = { tag: "history-merge" };
 
