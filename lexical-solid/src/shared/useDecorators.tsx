@@ -3,7 +3,6 @@ import {
   createMemo,
   createSignal,
   onMount,
-  JSX,
   Component,
   Accessor,
   createComponent,
@@ -11,6 +10,7 @@ import {
   onCleanup,
 } from "solid-js";
 import { Portal } from "solid-js/web";
+import { JSX } from "solid-js/jsx-runtime";
 
 type ErrorBoundaryProps = {
   children: JSX.Element;

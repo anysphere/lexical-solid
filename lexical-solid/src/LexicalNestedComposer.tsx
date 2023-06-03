@@ -3,9 +3,10 @@ import {
   createLexicalComposerContext,
   LexicalComposerContext,
 } from "./LexicalComposerContext";
-import { useCollaborationContext } from "./LexicalCollaborationContext";
+// import { useCollaborationContext } from "./LexicalCollaborationContext";
 import { EditorThemeClasses, Klass, LexicalEditor, LexicalNode } from "lexical";
-import { createEffect, JSX, onCleanup, useContext } from "solid-js";
+import { createEffect, onCleanup, useContext } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 export function LexicalNestedComposer(props: {
   children: JSX.Element;
@@ -64,18 +65,18 @@ export function LexicalNestedComposer(props: {
   props.initialEditor._editable = parentEditor._editable;
 
   // If collaboration is enabled, make sure we don't render the children until the collaboration subdocument is ready.
-  const { isCollabActive, yjsDocMap } = useCollaborationContext();
+  // const { isCollabActive, yjsDocMap } = useCollaborationContext();
 
-  const isCollabReady = () =>
-    props.skipCollabChecks ||
-    wasCollabPreviouslyReadyRef ||
-    yjsDocMap.has(props.initialEditor.getKey());
+  // const isCollabReady = () =>
+  //   props.skipCollabChecks ||
+  //   wasCollabPreviouslyReadyRef ||
+  //   yjsDocMap.has(props.initialEditor.getKey());
 
-  createEffect(() => {
-    if (isCollabReady()) {
-      wasCollabPreviouslyReadyRef = true;
-    }
-  });
+  // createEffect(() => {
+  //   if (isCollabReady()) {
+  //     wasCollabPreviouslyReadyRef = true;
+  //   }
+  // });
 
   // Update `isEditable` state of nested editor in response to the same change on parent editor.
   createEffect(() => {
@@ -88,7 +89,8 @@ export function LexicalNestedComposer(props: {
 
   return (
     <LexicalComposerContext.Provider value={[props.initialEditor, context]}>
-      {!isCollabActive || isCollabReady() ? props.children : null}
+      {/* {!isCollabActive || isCollabReady() ? props.children : null} */}
+      {props.children}
     </LexicalComposerContext.Provider>
   );
 }

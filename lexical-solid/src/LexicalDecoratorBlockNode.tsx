@@ -5,7 +5,7 @@ import type {
   SerializedLexicalNode,
   Spread,
 } from "lexical";
-import type { JSX } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 import { DecoratorNode } from "lexical";
 

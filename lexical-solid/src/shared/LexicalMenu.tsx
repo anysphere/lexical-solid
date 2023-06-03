@@ -19,11 +19,11 @@ import {
   createEffect,
   createMemo,
   createSignal,
-  JSX,
   on,
   onCleanup,
   untrack,
 } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 export type MenuTextMatch = {
   leadOffset: number;

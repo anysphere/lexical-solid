@@ -4,7 +4,8 @@ import { $createHashtagNode, HashtagNode } from "@lexical/hashtag";
 import { useLexicalComposerContext } from "./LexicalComposerContext";
 import { useLexicalTextEntity } from "./useLexicalTextEntity";
 
-import { JSX, onMount } from "solid-js";
+import { onMount } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 function getHashtagRegexStringChars(): Readonly<{
   alpha: string;

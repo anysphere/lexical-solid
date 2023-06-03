@@ -23,11 +23,11 @@ import {
   on,
   createSignal,
   Show,
-  JSX,
   startTransition,
   onCleanup,
   Accessor,
 } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 export type QueryMatch = {
   leadOffset: number;

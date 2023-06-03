@@ -2,13 +2,8 @@ import type { MenuRenderFn, MenuResolution } from "./shared/LexicalMenu";
 
 import { useLexicalComposerContext } from "./LexicalComposerContext";
 import { $getNodeByKey, NodeKey, TextNode } from "lexical";
-import {
-  type JSX,
-  createSignal,
-  createEffect,
-  startTransition,
-  Show,
-} from "solid-js";
+import { createSignal, createEffect, startTransition, Show } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 import {
   LexicalMenu,

@@ -16,7 +16,8 @@ import {
   SerializedLexicalNode,
 } from "lexical";
 
-import { createEffect, JSX, onCleanup } from "solid-js";
+import { createEffect, onCleanup } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 import { createCommand, DecoratorNode } from "lexical";
 import { useLexicalComposerContext } from "./LexicalComposerContext";

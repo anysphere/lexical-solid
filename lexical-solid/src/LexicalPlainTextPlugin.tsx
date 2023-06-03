@@ -3,7 +3,8 @@ import { useLexicalEditable } from "./useLexicalEditable";
 import { useCanShowPlaceholder } from "./shared/useCanShowPlaceholder";
 import { ErrorBoundaryType, useDecorators } from "./shared/useDecorators";
 import { usePlainTextSetup } from "./shared/usePlainTextSetup";
-import { createMemo, JSX, Show, untrack } from "solid-js";
+import { createMemo, Show, untrack } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 export function PlainTextPlugin(params: {
   contentEditable: JSX.Element;

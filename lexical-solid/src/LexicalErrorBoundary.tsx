@@ -1,4 +1,5 @@
-import { ErrorBoundary, JSX } from "solid-js";
+import { ErrorBoundary } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 
 export type LexicalErrorBoundaryProps = {
   children: JSX.Element;

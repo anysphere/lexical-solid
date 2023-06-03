@@ -1,4 +1,4 @@
-import { JSX } from "solid-js";
+import { JSX } from "solid-js/jsx-runtime";
 import { useLexicalComposerContext } from "./LexicalComposerContext";
 import { useHistory } from "./shared/useHistory";
 import type { HistoryState, HistoryStateEntry } from "@lexical/history";
